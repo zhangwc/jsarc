@@ -2,8 +2,9 @@
 define(['backbone_route', 'underscore'], function (Router, _) {
 
 	var routes = {
-		'module1(/:name)(/:age)': 'module1/controller1.js'
+		'module1(/:name)(/:age)': 'module1/controller1.js',
 		// 'module2/:name/:age': ''
+        'module2': 'module2/controller.js'
 	};
 
 	var currentController = null;
