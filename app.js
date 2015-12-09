@@ -13,7 +13,9 @@
             backbone_route: 'libs/backbone-route',
             zepto: 'http://apps.bdimg.com/libs/zepto/1.1.4/zepto.min',
             underscore: 'http://apps.bdimg.com/libs/underscore.js/1.7.0/underscore-min',
-            text: 'libs/text'             //用于requirejs导入html类型的依赖
+            text: 'libs/text',             //用于requirejs导入html类型的依赖
+            window: 'widget/window/window',
+            widget: 'widget/widget'
         },
         shim: {                     //引入没有使用requirejs模块写法的类库。
             underscore: {

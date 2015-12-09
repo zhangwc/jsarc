@@ -1,10 +1,24 @@
-define(['text!module1/tpl1.html'], function (tpl) {
+define(['text!module1/tpl1.html', 'window'], function (tpl, w) {
 
     var controller = function (name,age) {
 		appView.html(_.template(tpl)({name: name?name:'vivi', age: age?age:'27'}));
 
         $('button').on('click', function clickHandler() {
-            alert('hello');
+            var win = new w.Window();
+			win.alert({
+				title: "提示",
+				content: "welcome",
+				handlerForAlertBtn: function(a,b){
+					console.log("ok button click");
+				},
+				handlerForCloseBtn: function(a, b){
+					console.log("close button click");
+				},
+				width: 200, 
+				height: 150,
+				hasCloseBtn: true,
+				hasMask: true
+			});
         });
 
         controller.onRouteChange = function () {
